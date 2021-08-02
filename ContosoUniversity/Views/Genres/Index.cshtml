@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ContosoUniversity.Models.Genre>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.libelle_genre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.libelle_genre)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id_genre }, new { @class = "btn btn-success btn-sm" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id_genre }, new { @class = "btn btn-secondary btn-sm" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id_genre }, new { @class = "btn btn-danger btn-sm" })
+                </td>
+            </tr>
+        }
+
+</table>

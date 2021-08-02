@@ -1,0 +1,82 @@
+﻿@model ContosoUniversity.Models.Livre
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Livre</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.titre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.titre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.langue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.langue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nbre_page)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nbre_page)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.image_livre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.image_livre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date_parution)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_parution)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Auteur.nom_auteur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Auteur.nom_auteur)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Courant.libelle_courant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Courant.libelle_courant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre.libelle_genre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genre.libelle_genre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_livre }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

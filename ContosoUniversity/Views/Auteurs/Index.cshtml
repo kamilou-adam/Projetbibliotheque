@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ContosoUniversity.Models.Auteur>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nom_auteur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.prenom_auteur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nationalite)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nom_auteur)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.prenom_auteur)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nationalite)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id_auteur}, new { @class = "btn btn-success" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id_auteur }, new { @class = "btn btn-secondary" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id_auteur }, new { @class = "btn btn-warning" })
+                </td>
+            </tr>
+        }
+
+</table>

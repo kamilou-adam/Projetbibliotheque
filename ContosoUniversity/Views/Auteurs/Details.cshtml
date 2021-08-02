@@ -1,0 +1,42 @@
+﻿@model ContosoUniversity.Models.Auteur
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Auteur</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nom_auteur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom_auteur)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prenom_auteur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prenom_auteur)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nationalite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nationalite)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_auteur }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
